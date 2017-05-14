@@ -1,0 +1,57 @@
+Durchgeführt und getestet: 07.05.2017 
+Anleitung mit frischen OSMC (Release: 2017.03-1):
+
+- SPI unter MyOSMC -> PiConfig -> Hardware Support aktivieren
+- Modul anschließen
+- per SSH einloggen
+- System upgraden auf aktuelle Version und zusätzlich "apt-transport-https" installieren
+- "spi-bcm2835" in "/etc/modules" eintragen und neustarten
+- "deb https://archive.raspberrypi.org/debian jessie main" in "/etc/apt/sources.list" eintragen
+- in /boot/config.txt "dtparam=spi=on" eintragen
+- "apt-get update" ausführen
+- "apt-get install python-dev git gcc python-rpi.gpio --force-yes -y" ausführen
+
+PythonSpiModul installieren:
+
+- "cd /tmp/"
+- "git --depth 1 https://github.com/lthiery/SPI-Py.git"
+- "cd SPI-Py"
+- "sudo python setup.py install"
+
+Rpi RFID RC522 Bibliothek installieren
+
+- "git clone https://github.com/mxgxw/MFRC522-python.git && cd MFRC522-python"
+
+
+Zum TESTEN:
+
+- "sudo python Read.py"
+
+
+Weiter im OSMC:
+
+- Mastersperre aktivieren für alle Bereiche "Einstellungen -> Benutzeroberfläche -> Master-Sperre"
+- neuen Benutzer anlegen "Einstellungen -> Profile -> Profile -> Profil hinzufügen... " z.B. "Kids"
+-	Profil bearbeiten:
+						Sperren konfigurieren:	wenn notwendig Programme...
+						Medien-Informationen:	Eigenständig
+						Medien-Quellen:			Eigenständig
+- wenn alles Ok, mit !!Neu beginnen!! fortfahren
+- unter "Einstellungen -> Profile -> Allgemein" Login-Screen einschalten
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bekannte Probleme:
+
+- bei Benutzung von python-spidev -> Speicherzugriffsfehler (bei Benutzung des Beispiels aus Doku)
