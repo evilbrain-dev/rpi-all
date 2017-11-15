@@ -3,7 +3,11 @@ HD44780-Clock:	- 	Zeigt in Verbindung mit einem 20x4 Zeilen LCD Displays welches
 					verschiedene Informationen an.
 
 Beschreibung:	-	Anzeige von Datum und Uhrzeit
-				-	Anzeige von Onlinestatus und eigene Prozessortemperatur
-				-	Anzeige von Titel und Interpret eines im Netzwerk laufenden Kodi-Audioplayers
+		-	Anzeige von Onlinestatus und eigene Prozessortemperatur
+		-	Anzeige von Titel und Interpret eines im Netzwerk laufenden Kodi-Audioplayers
 				
-benötigte Teile:	-	ein 20x4 Zeilen LCD Display "https://www.adafruit.com/product/198"
+Equipment	-	ein 20x4 Zeilen LCD Display (bestellbar hier:"https://www.adafruit.com/product/198", oder woanders)
+		-	einen I2C Modul (bestellbar hier: "https://eckstein-shop.de/IIC-I2C-SPI-Serial-Interface-Modul-For-1602-2004?curr=EUR&gclid=EAIaIQobChMIiKeE6pbA1wIVQxYbCh0OXglpEAkYAyABEgLngPD_BwE", oder woanders)
+		-	4x Jumperkabel Male/Male ( Mutti/Mutti )
+		-	1x Raspberry Pi B+, 2 oder 3
+		-	Zeit
